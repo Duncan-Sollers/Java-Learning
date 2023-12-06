@@ -1,4 +1,4 @@
-package dev.duncan.wsollers.firealarm;
+package dev.duncan.wsollers;
 
 public interface FireAlarm {
 
