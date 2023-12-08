@@ -3,6 +3,7 @@ package dev.duncan;
 import dev.duncan.MathFunc.MathDollarCounter;
 import dev.duncan.MathFunc.MathEven;
 import dev.duncan.MathFunc.MathOdd;
+import dev.duncan.jurassicpark.JurassicPark;
 import dev.duncan.wsollers.FireAlarm;
 
 public class Main {
@@ -29,7 +30,15 @@ public class Main {
         result = mathOdd.MathCounter(12);
         System.out.println("The Result Was: "+ result);
         */
+        /*
         MathDollarCounter dollarCounter = new MathDollarCounter();
-        dollarCounter.weekDollarCounter(52);
+        dollarCounter.weekDollarCounter(0);
+        */
+        try {
+            JurassicPark.main(args);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 }
