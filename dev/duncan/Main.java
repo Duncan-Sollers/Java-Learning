@@ -1,5 +1,6 @@
 package dev.duncan;
 
+import dev.duncan.MathFunc.MathDollarCounter;
 import dev.duncan.MathFunc.MathEven;
 import dev.duncan.MathFunc.MathOdd;
 import dev.duncan.wsollers.FireAlarm;
@@ -20,12 +21,15 @@ public class Main {
         firealarm.sound();
         firealarm.stop();
         */
+        /*
         MathOdd mathOdd = new MathOdd();
         MathEven mathEven = new MathEven();
         result = mathEven.MathCounter(13);
         System.out.println("The Result Was: "+ result);
         result = mathOdd.MathCounter(12);
         System.out.println("The Result Was: "+ result);
-    
+        */
+        MathDollarCounter dollarCounter = new MathDollarCounter();
+        dollarCounter.weekDollarCounter(52);
     }
 }
