@@ -8,6 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Stream;
 
 public class JPAuth {
+    //TODO: this should really be static
     private  Map<String,String> passwordsMap = new ConcurrentHashMap<String,String>();
     public JPAuth(){
         BufferedReader br = new BufferedReader(
@@ -19,11 +20,12 @@ public class JPAuth {
         for(String passwordEntry : passswords) {
             addUserAndPassword(passwordEntry);
         }
+        //TODO: close br
     }
     private void addUserAndPassword(String currentString){
         System.out.println("***"+currentString);
         String[] values = currentString.split(" ");
-        //do i have 2 strings???
+        //TODO: do i have 2 strings???
         passwordsMap.put(values[0], values[1]);
     }
 
@@ -31,12 +33,14 @@ public class JPAuth {
         return passwordsMap.size();
     }
 
+    //TODO: THis should be refactored. Extract into interface and make a FilePasswordStore that implements it.
     public boolean authenticate(String userName, String password){
         if((userName == null)||(password ==null)){
             return false;
         }
         if (passwordsMap.containsKey(userName)) {
             String storedPassword = passwordsMap.get(userName);
+            //TODO: checks for nulls etc..
             if (storedPassword.equals(password)) {
                 System.out.println("Authentication succesful");
                 return true;

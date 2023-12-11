@@ -4,6 +4,7 @@ import dev.duncan.MathFunc.MathDollarCounter;
 import dev.duncan.MathFunc.MathEven;
 import dev.duncan.MathFunc.MathOdd;
 import dev.duncan.jurassicpark.JurassicPark;
+import dev.duncan.programpractice.dec_12_10_2023.ProgramAlpha;
 import dev.duncan.wsollers.FireAlarm;
 
 public class Main {
@@ -34,11 +35,14 @@ public class Main {
         MathDollarCounter dollarCounter = new MathDollarCounter();
         dollarCounter.weekDollarCounter(0);
         */
-        try {
+        /*try {
             JurassicPark.main(args);
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        }
+        }*/
+
+        ProgramAlpha programAlpha = new ProgramAlpha();
+        programAlpha.loopFizzBuzz(33);
     }
 }
