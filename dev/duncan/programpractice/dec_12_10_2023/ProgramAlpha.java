@@ -10,7 +10,7 @@ public class ProgramAlpha {
             if (numIn % 5 == 0) {
                 fizzBuzzString = fizzBuzzString + "Buzz";
             }
-        }   
+        }  
         else{
            fizzBuzzString = fizzBuzzString + "" + numIn;
         }

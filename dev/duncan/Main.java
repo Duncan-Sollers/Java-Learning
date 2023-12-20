@@ -43,6 +43,6 @@ public class Main {
         }*/
 
         ProgramAlpha programAlpha = new ProgramAlpha();
-        programAlpha.loopFizzBuzz(33);
+        programAlpha.loopFizzBuzz(6);
     }
 }

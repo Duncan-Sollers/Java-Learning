@@ -11,7 +11,6 @@ public class ProgramGamma {
                 return false;
             }
             
-            
             if (leftIndex >= rightIndex){
                 return true;
             }

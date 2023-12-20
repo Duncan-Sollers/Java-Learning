@@ -44,4 +44,9 @@ public class ProgramAlphaTest {
         assertEquals("FizzBuzz",new ProgramAlpha().fizzBuzz(30));
     }
 
+    @Test
+    void   testFizzBuzz0(){
+        assertEquals("FizzBuzz",new ProgramAlpha().fizzBuzz(0));
+    }
+
 }
