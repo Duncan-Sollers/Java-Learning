@@ -9,8 +9,8 @@ public class IntegerComparator implements Comparator<Integer> {
      * Greater than > means rhs is bigger than lhs +1
      */
     @Override
-    public int compare(Integer lhs, Integer rhs) {
-          return lhs.compareTo(rhs);
+    public int compare(Integer rhs, Integer lhs) {
+          return rhs.compareTo(lhs);
 
     }
 }
