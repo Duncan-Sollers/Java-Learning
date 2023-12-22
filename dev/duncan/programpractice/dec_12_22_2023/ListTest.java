@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListTest {
+    
     public String str1 = "Element1";
     @Test
     public void testList(){
@@ -162,6 +163,53 @@ public class ListTest {
         assertEquals("c",listC.get(2));
         assertEquals("k",listC.get(3));
         assertEquals("z",listC.get(4));
+    
+        
+
+
+    }
+
+    @Test
+    public void testList_Sort1(){
+        
+        List<String> listC = new ArrayList<String>();
+
+        listC.add("z");
+        listC.add("b");
+        listC.add("k");
+        listC.add("c");
+        listC.add("a");
+
+        listC.sort(new StringComparator());
+        
+        assertEquals("a",listC.get(0));
+        assertEquals("b",listC.get(1));
+        assertEquals("c",listC.get(2));
+        assertEquals("k",listC.get(3));
+        assertEquals("z",listC.get(4));
+    
+        
+
+
+    }
+    @Test
+    public void testList_SortReverse(){
+        
+        List<String> listC = new ArrayList<String>();
+
+        listC.add("z");
+        listC.add("b");
+        listC.add("k");
+        listC.add("c");
+        listC.add("a");
+
+        listC.sort(new ReverseStringComparator());
+        
+        assertEquals("a",listC.get(4));
+        assertEquals("b",listC.get(3));
+        assertEquals("c",listC.get(2));
+        assertEquals("k",listC.get(1));
+        assertEquals("z",listC.get(0));
     
         
 
