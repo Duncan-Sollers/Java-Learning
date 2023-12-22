@@ -119,9 +119,31 @@ public class ListTest {
         assertEquals("3",ListB.get(0));
         assertEquals(false, ListB.contains("Element1"));
         assertEquals(false, ListB.contains("Element2"));
-        
-        
+        assertEquals(1, ListB.size());
+
     }
+
+    @Test
+    public void testList_Retains(){
+
+        List<String> ListA = new ArrayList<String>();
+        List<String> ListB = new ArrayList<String>();
+
+        ListA.add(0,"Element1");
+        ListA.add(1,"Element2");
+
+        ListB.add(0,"3");
+        ListB.addAll(ListA);
+        ListB.retainAll(ListA);
+
+        
+        assertEquals(false,ListB.contains("3"));
+        assertEquals(true, ListB.contains("Element1"));
+        assertEquals(true, ListB.contains("Element2"));
+        assertEquals(2, ListB.size());
+
+    }
+
 
 
 
