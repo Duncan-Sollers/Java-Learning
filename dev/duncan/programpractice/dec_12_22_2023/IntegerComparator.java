@@ -9,7 +9,7 @@ public class IntegerComparator implements Comparator<Integer> {
      * Greater than > means rhs is bigger than lhs +1
      */
     @Override
-    public int compare(Integer rhs, Integer lhs) {
+    public int compare(Integer lhs, Integer rhs) {
           return rhs.compareTo(lhs);
 
     }
