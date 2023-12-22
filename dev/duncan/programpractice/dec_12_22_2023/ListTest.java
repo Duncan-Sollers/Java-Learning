@@ -102,5 +102,28 @@ public class ListTest {
         assertFalse(testList.contains("Element1"));
     }
 
+    @Test
+    public void testList_WasItRemoved_ListADeleted(){
+
+        List<String> ListA = new ArrayList<String>();
+        List<String> ListB = new ArrayList<String>();
+
+        ListA.add(0,"Element1");
+        ListA.add(1,"Element2");
+
+        ListB.add(0,"3");
+        ListB.addAll(ListA);
+        ListB.removeAll(ListA);
+
+        
+        assertEquals("3",ListB.get(0));
+        assertEquals(false, ListB.contains("Element1"));
+        assertEquals(false, ListB.contains("Element2"));
+        
+        
+    }
+
+
+
 
 }
