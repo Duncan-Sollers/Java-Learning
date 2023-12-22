@@ -10,15 +10,7 @@ public class StringComparator implements Comparator<String> {
      */
     @Override
     public int compare(String lhs, String rhs) {
-        if (lhs.compareTo(rhs) == 0){
-          return 0;
-        }
-        if (lhs.compareTo(rhs) == 1){
-          return 1;
-        }
-        if (lhs.compareTo(rhs) == -1){
-          return -1;
-        }
+          return lhs.compareTo(rhs);
 
     }
     
