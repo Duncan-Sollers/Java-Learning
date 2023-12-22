@@ -1,5 +1,6 @@
 package dev.duncan.programpractice.dec_12_22_2023;
 
+
 //Test imports:
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
@@ -220,19 +221,19 @@ public class ListTest {
         
         List<Integer> listC = new ArrayList<Integer>();
 
-        listC.add(26);
-        listC.add(2);
-        listC.add(11);
-        listC.add(3);
-        listC.add(1);
+        listC.add(Integer.valueOf(26));
+        listC.add(Integer.valueOf(2));
+        listC.add(Integer.valueOf(11));
+        listC.add(Integer.valueOf(3));
+        listC.add(Integer.valueOf(1));
 
         listC.sort(new IntegerComparator());
         
-        //assertEquals(0,listC.get(0));
-        //assertEquals(1,listC.get(1));
-        //assertEquals(2,listC.get(2));
-        //assertEquals(3,listC.get(3));
-        //assertEquals(4,listC.get(4));
+        assertEquals(Integer.valueOf(1),listC.get(0));
+        assertEquals(Integer.valueOf(2),listC.get(1));
+        assertEquals(Integer.valueOf(3),listC.get(2));
+        assertEquals(Integer.valueOf(11),listC.get(3));
+        assertEquals(Integer.valueOf(26),listC.get(4));
     
         
 
