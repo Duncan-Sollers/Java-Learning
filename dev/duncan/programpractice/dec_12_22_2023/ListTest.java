@@ -3,6 +3,7 @@ package dev.duncan.programpractice.dec_12_22_2023;
 //Test imports:
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 //List imports:
@@ -80,7 +81,7 @@ public class ListTest {
     }
 
     @Test
-    public void testList_WasItRemoved(){
+    public void testList_WasItRemovedIndex(){
 
         List<String> testList = new ArrayList<String>();
 
@@ -88,6 +89,17 @@ public class ListTest {
         testList.remove(0);
 
         assertTrue(testList.isEmpty());
+    }
+
+    @Test
+    public void testList_WasItRemovedObject(){
+
+        List<String> testList = new ArrayList<String>();
+
+        testList.add(0,"Element1");
+        testList.remove("Element1");
+
+        assertFalse(testList.contains("Element1"));
     }
 
 
