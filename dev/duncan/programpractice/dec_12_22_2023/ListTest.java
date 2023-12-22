@@ -239,6 +239,29 @@ public class ListTest {
 
 
     }
+    @Test
+    public void testList_SortInteger2(){
+        
+        List<Integer> listC = new ArrayList<Integer>();
+
+        listC.add(Integer.valueOf(26));
+        listC.add(Integer.valueOf(2));
+        listC.add(Integer.valueOf(11));
+        listC.add(Integer.valueOf(3));
+        listC.add(Integer.valueOf(1));
+
+        listC.sort(new IntegerComparator());
+        
+        assertEquals(Integer.valueOf(1),listC.get(0));
+        assertEquals(Integer.valueOf(2),listC.get(1));
+        assertEquals(Integer.valueOf(3),listC.get(2));
+        assertEquals(Integer.valueOf(11),listC.get(3));
+        assertEquals(Integer.valueOf(26),listC.get(4));
+    
+        
+
+
+    }
 
 
 
