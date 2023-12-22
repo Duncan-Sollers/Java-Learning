@@ -1,13 +1,13 @@
 package dev.duncan.programpractice.dec_12_22_2023;
 
+//Test imports:
+import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+//List imports:
 import java.util.ArrayList;
 import java.util.List;
-
-import org.junit.Test;
-
 
 public class ListTest {
     public String str1 = "Element1";
@@ -49,6 +49,7 @@ public class ListTest {
     }
     @Test
     public void testTwoNewListsHaveSameValuesImproved(){
+
         List<String> ListA = new ArrayList<String>();
         List<String> ListB = new ArrayList<String>();
 
@@ -63,6 +64,7 @@ public class ListTest {
 
     @Test
     public void testTwoNewListHaveSimilarValuesButOneAdditionalElementInListB(){
+
         List<String> ListA = new ArrayList<String>();
         List<String> ListB = new ArrayList<String>();
 
@@ -76,4 +78,17 @@ public class ListTest {
         assertEquals("Element1",ListB.get(1));
         assertEquals("Element2",ListB.get(2));
     }
+
+    @Test
+    public void testList_WasItRemoved(){
+
+        List<String> testList = new ArrayList<String>();
+
+        testList.add(0,"Element1");
+        testList.remove(0);
+
+        assertTrue(testList.isEmpty());
+    }
+
+
 }
