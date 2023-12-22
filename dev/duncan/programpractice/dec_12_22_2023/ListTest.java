@@ -250,7 +250,13 @@ public class ListTest {
         listC.add(Integer.valueOf(3));
         listC.add(Integer.valueOf(1));
 
-        listC.sort(new IntegerComparator());
+        Comparator myComparator = new Comparator<Integer>(){
+            @Override
+            public int compare(Integer lhs, Integer rhs) {
+                return lhs.compareTo(rhs);
+            }
+        };
+        listC.sort(myComparator);
         
         assertEquals(Integer.valueOf(1),listC.get(0));
         assertEquals(Integer.valueOf(2),listC.get(1));
