@@ -144,6 +144,32 @@ public class ListTest {
 
     }
 
+    @Test
+    public void testList_Sort(){
+
+        List<String> listC = new ArrayList<String>();
+
+        listC.add("z");
+        listC.add("b");
+        listC.add("k");
+        listC.add("c");
+        listC.add("a");
+
+        listC.sort(null);
+        
+        assertEquals("a",listC.get(0));
+        assertEquals("b",listC.get(1));
+        assertEquals("c",listC.get(2));
+        assertEquals("k",listC.get(3));
+        assertEquals("z",listC.get(4));
+    
+        
+
+
+    }
+
+
+
 
 
 
