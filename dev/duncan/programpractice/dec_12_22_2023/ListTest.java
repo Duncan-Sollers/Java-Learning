@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 //List imports:
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ListTest {
@@ -250,7 +251,7 @@ public class ListTest {
         listC.add(Integer.valueOf(3));
         listC.add(Integer.valueOf(1));
 
-        Comparator myComparator = new Comparator<Integer>(){
+        Comparator<Integer> myComparator = new Comparator<Integer>(){
             @Override
             public int compare(Integer lhs, Integer rhs) {
                 return lhs.compareTo(rhs);
