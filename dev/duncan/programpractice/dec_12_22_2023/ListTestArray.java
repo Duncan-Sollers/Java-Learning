@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class ListTest {
+public class ListTestArray {
     
     public String str1 = "Element1";
     @Test
