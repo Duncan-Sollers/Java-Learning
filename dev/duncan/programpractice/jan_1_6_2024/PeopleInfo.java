@@ -51,6 +51,16 @@ public class PeopleInfo {
         this.age = age;
     }
 
+
+    @Override
+    public String toString() {
+        return "{" +
+            " firstName='" + getFirstName() + "'" +
+            ", lastName='" + getLastName() + "'" +
+            ", sex='" + getSex() + "'" +
+            ", age='" + getAge() + "'" +
+            "}";
+    }
     
 
     

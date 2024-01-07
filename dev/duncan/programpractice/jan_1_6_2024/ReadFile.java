@@ -29,8 +29,8 @@ public class ReadFile {
             while(line != null){ 
                 //System.out.println(line);
                 StringTokenizer st = new StringTokenizer(line , ",");
-                for(int i=1 ; i<4 ; i++){
-                    PeopleInfo peopleInfo = new PeopleInfo();
+                PeopleInfo peopleInfo = new PeopleInfo();
+                for(int i=1 ; i<=4 ; i++){
                     String currToken = st.nextToken();
                     switch (i){
                         case 1:
@@ -46,10 +46,12 @@ public class ReadFile {
                             peopleInfo.setAge(Integer.valueOf(currToken));
                             break;
                         default:
-                            throw new IllegalStateException();
+                            throw new IllegalStateException("unknown collumn number " + i);
                     }
+                    
                 }
-                //System.out.println("\n");
+                System.out.println("People info " + peopleInfo.toString());
+                
                 line = data.readLine();
                 
             }
