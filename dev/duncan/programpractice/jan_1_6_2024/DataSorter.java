@@ -5,12 +5,7 @@ import java.util.List;
 
 public class DataSorter {
     public static void main(String[] args) {
-        ReadFile fileReaderTest =  new ReadFile();
-        fileReaderTest.openFile();
-        List<PeopleInfo> results = fileReaderTest.readFile();
-        results.sort(new AgeComparator());
-        for (PeopleInfo current: results){
-            System.out.println(current);
-        }
+        DataSorterAbs dataSort = new DataSorterAbs();
+        dataSort.userInput();
     }
 }
