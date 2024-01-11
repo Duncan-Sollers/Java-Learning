@@ -10,6 +10,7 @@ import java.util.StringTokenizer;
 public class ReadFile {
     private BufferedReader data = null;
     private String fileName = null;
+    private String delimiter = null;
     
     public ReadFile(){
         fileName = "dataFile.csv";
@@ -17,6 +18,12 @@ public class ReadFile {
 
     public ReadFile(String fileName){
         this.fileName = fileName;
+    }
+    public void ReadDelimiter(){
+        delimiter = ",";
+    }
+    public void ReadDelimiter(String delimiter){
+        this.delimiter = delimiter;
     }
 
     public boolean openFile(){
@@ -32,7 +39,7 @@ public class ReadFile {
 
             while(line != null){ 
                 //System.out.println(line);
-                StringTokenizer st = new StringTokenizer(line , ",");
+                StringTokenizer st = new StringTokenizer(line , delimiter);
                 PeopleInfo peopleInfo = new PeopleInfo();
                 for(int i=1 ; i<=4 ; i++){
                     String currToken = st.nextToken();

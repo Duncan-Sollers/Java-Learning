@@ -12,13 +12,19 @@ public class DataSorterAbs {
         try (Scanner fileNameReader = new Scanner(System.in)) {
             ReadFile fileReaderTest =  new ReadFile(fileNameReader.nextLine());
 
+            System.out.println("Please input the file delimiter character [1 CHAR ONLY]");
+            response = fileNameReader.nextLine();
+            fileReaderTest.ReadDelimiter(response);
 
             System.out.println("The sort options are: \nFirst name........first\nLast name.........last\nSex...............sex\nAge...............age\nPrint.............print");
             System.out.print(">");
-            Scanner userChoice = new Scanner(System.in);
-            this.response = userChoice.nextLine();
+
+            try (Scanner userChoice = new Scanner(System.in)) {
+                this.response = userChoice.nextLine();
+            }
             System.out.print("\n");
             System.out.println("Loading:");
+
             fileReaderTest.openFile();
             List<PeopleInfo> results = fileReaderTest.readFile();
             
