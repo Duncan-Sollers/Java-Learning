@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 public class ReadFile {
     private BufferedReader data = null;
     private String fileName = null;
-
+    
     public ReadFile(){
         fileName = "dataFile.csv";
     }
