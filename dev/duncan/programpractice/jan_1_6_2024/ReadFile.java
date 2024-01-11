@@ -9,20 +9,15 @@ import java.util.StringTokenizer;
 
 public class ReadFile {
     private BufferedReader data = null;
-    private String fileName = null;
-    private String delimiter = null;
-    
-    public ReadFile(){
-        fileName = "dataFile.csv";
-    }
+    private String fileName = "dataFile.csv";
+    private String delimiter = ",";
 
     public ReadFile(String fileName){
         this.fileName = fileName;
     }
-    public void ReadDelimiter(){
-        delimiter = ",";
-    }
-    public void ReadDelimiter(String delimiter){
+   
+    public ReadFile(String fileName,String delimiter){
+        this.fileName = fileName;
         this.delimiter = delimiter;
     }
 

@@ -5,22 +5,28 @@ import java.util.Scanner;
 
 public class DataSorterAbs {
     private String response;
+    private String response2;
+    private String response3;
     public void userInput(){
-        System.out.println("Welcome to the Files Management System");
-        System.out.println("Please input the file name as follows: file.extension");
-
         try (Scanner fileNameReader = new Scanner(System.in)) {
-            ReadFile fileReaderTest =  new ReadFile(fileNameReader.nextLine());
+            
+            System.out.println("Welcome to the Files Management System");
+            System.out.println("Please input the file name as follows: file.extension");
+            this.response = fileNameReader.nextLine();
+            
+            
 
             System.out.println("Please input the file delimiter character [1 CHAR ONLY]");
-            response = fileNameReader.nextLine();
-            fileReaderTest.ReadDelimiter(response);
+            
+            this.response2 = fileNameReader.nextLine();
+            
+            ReadFile fileReaderTest =  new ReadFile(response,response2);
 
             System.out.println("The sort options are: \nFirst name........first\nLast name.........last\nSex...............sex\nAge...............age\nPrint.............print");
             System.out.print(">");
 
             try (Scanner userChoice = new Scanner(System.in)) {
-                this.response = userChoice.nextLine();
+                this.response3 = userChoice.nextLine();
             }
             System.out.print("\n");
             System.out.println("Loading:");
@@ -28,7 +34,7 @@ public class DataSorterAbs {
             fileReaderTest.openFile();
             List<PeopleInfo> results = fileReaderTest.readFile();
             
-            switch (response) {
+            switch (response3) {
                 case "first":
                 results.sort(new FirstNameComparator());
                 for (PeopleInfo current: results){
