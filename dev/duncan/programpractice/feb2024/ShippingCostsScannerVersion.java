@@ -87,7 +87,7 @@ public class ShippingCostsScannerVersion {
         "Costs: $"+itemPrice+"\n"+
         "Weighs: "+weight+" lbs\n"+
         "****************************************"+"\n"+
-        "Estimated Shipping without taxes: "+cost+"\n"+
+        "Estimated Shipping without taxes: $"+cost+"\n"+
         "****************************************"+"\n"+
         "Subtotal: $"+subTotal+"\n");
         System.out.printf("Total you pay today: $%.2f",total);

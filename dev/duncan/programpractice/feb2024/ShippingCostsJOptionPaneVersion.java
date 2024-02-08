@@ -1,4 +1,5 @@
 import java.text.DecimalFormat;
+
 import javax.swing.JOptionPane;
 /**
  * this is the JoptionPane version of this program, utilizing GUI.
@@ -89,9 +90,9 @@ public class ShippingCostsJOptionPaneVersion {
                                     "Costs: $"+itemPrice+"\n"+
                                     "Weighs: "+weight+" lbs\n"+
                                     "****************************************"+"\n"+
-                                    "Estimated Shipping without taxes: "+cost+"\n"+
+                                    "Estimated Shipping without taxes: $"+cost+"\n"+
                                     "****************************************"+"\n"+
-                                    "Subtotal: $"+subTotal+"\nTotal you pay today: "+decimalFormat.format(total)+"\n"+
+                                    "Subtotal: $"+subTotal+"\nTotal you pay today: $"+decimalFormat.format(total)+"\n"+
                                     "****************************************"+
                                     "\n"+"Thank you for shopping with us today!"));
         }// end formatter
